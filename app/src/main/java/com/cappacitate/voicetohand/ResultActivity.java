@@ -5,18 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
-
-//package com.wallpaer;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.os.Bundle;
-import android.app.Activity;
-import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
-
-import java.io.IOException;
-import java.io.InputStream;
 
 public class ResultActivity extends ActionBarActivity {
 
