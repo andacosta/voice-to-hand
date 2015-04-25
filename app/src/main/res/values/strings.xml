@@ -3,9 +3,12 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+<<<<<<< HEAD
 
     <string name="main_title">Presione para grabar</string>
     <string name="input_hint">Ingrese una palabra</string>
     <string name="button_send">ENVIAR</string>
 
+=======
+>>>>>>> origin/master
 </resources>
