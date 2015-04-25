@@ -56,16 +56,16 @@ public class ResultActivity extends ActionBarActivity {
                 image.setImageResource(R.drawable.hoy);
                 break;
             case "mañana":
-                image.setImageResource(R.drawable.hoy);
+                image.setImageResource(R.drawable.manana);
                 break;
             case "mediodia":
-                image.setImageResource(R.drawable.hoy);
+                image.setImageResource(R.drawable.mediodia);
                 break;
             case "noche":
-                image.setImageResource(R.drawable.hoy);
+                image.setImageResource(R.drawable.noche);
                 break;
             case "tarde":
-                image.setImageResource(R.drawable.hoy);
+                image.setImageResource(R.drawable.tarde);
                 break;
             case "ayer":
                 image.setImageResource(R.drawable.ayer);
