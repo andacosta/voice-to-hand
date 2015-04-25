@@ -51,8 +51,6 @@ public class MainActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-
-
 			try{
 				startActivityForResult(VC.getIntent(), RECOGNIZE_SPEECH_ACTIVITY);
 			}catch (ActivityNotFoundException a){
