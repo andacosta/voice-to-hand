@@ -6,6 +6,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 
@@ -62,5 +64,29 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    // Mic Button onClick() Listener
+    public void startRecord(View view) {
+
+
+        //sendSearchRequest();
+    }
+
+    // Send Button onClick() Listener
+    public void getInputString(View view) {
+        String key;
+        
+        EditText et = (EditText)findViewById(R.id.send_text_button);
+        key = et.getText().toString();
+
+        //sendSearchRequest();
+    }
+
+    // Call indent and send key
+    public void sendSearchRequest(String text) {
+        Intent intent = new Intent(this, ResultActivity.class);
+        intent.putExtra("key",text);
+        startActivity(intent);
     }
 }
