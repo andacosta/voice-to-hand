@@ -20,6 +20,7 @@ public class VoiceRecognizer {
 	public String getResultMessage(Intent data){
 		ArrayList<String> speech = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
 
+
 		return resultText = speech.get(0);
 	}
 
