@@ -6,6 +6,6 @@
 
     <string name="main_title">Presione para grabar</string>
     <string name="input_hint">Ingrese una palabra</string>
-    <string name="button_send">Enviar</string>
+    <string name="button_send">ENVIAR</string>
 
 </resources>
