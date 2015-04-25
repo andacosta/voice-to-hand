@@ -29,8 +29,11 @@ public class MainActivity extends ActionBarActivity {
 		switch (requestCode) {
 			case RECOGNIZE_SPEECH_ACTIVITY:
 
-				String result = VC.getResultMessage(data);
-				Toast.makeText(this,result,Toast.LENGTH_LONG).show();
+				/*String result = VC.getResultMessage(data);
+				Toast.makeText(this,result,Toast.LENGTH_LONG).show();*/
+
+                text = VC.getResultMessage(data);
+                sendSearchRequest();
 
 				//para palabras individuales
 				//String sample = VC.getWord(0);
@@ -55,13 +58,7 @@ public class MainActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-			try{
-				startActivityForResult(VC.getIntent(), RECOGNIZE_SPEECH_ACTIVITY);
-			}catch (ActivityNotFoundException a){
-				Toast.makeText(getApplicationContext(),
-						"¡Opps! Tú dispositivo no soporta Speech to Text",
-						Toast.LENGTH_SHORT).show();
-			}
+
             return true;
         }
 
@@ -70,8 +67,13 @@ public class MainActivity extends ActionBarActivity {
 
     // Mic Button onClick() Listener
     public void startRecord(View view) {
-
-        Toast.makeText(this, "Mic button", Toast.LENGTH_SHORT).show();
+        try{
+            startActivityForResult(VC.getIntent(), RECOGNIZE_SPEECH_ACTIVITY);
+        }catch (ActivityNotFoundException a){
+            Toast.makeText(getApplicationContext(),
+                    "¡Opps! Tú dispositivo no soporta Speech to Text",
+                    Toast.LENGTH_SHORT).show();
+        }
 
         //sendSearchRequest();
     }
