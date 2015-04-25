@@ -4,6 +4,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 
 public class ResultActivity extends ActionBarActivity {
@@ -12,6 +13,11 @@ public class ResultActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
+
+        // Get string data
+        String text = getIntent().getStringExtra("key");
+
+        ((TextView)findViewById(R.id.string_label)).setText(text);
     }
 
 
@@ -36,4 +42,10 @@ public class ResultActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    // Back Button onClick() Listener
+    public void returnHome() {
+
+    }
+
 }

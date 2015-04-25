@@ -15,6 +15,8 @@ public class MainActivity extends ActionBarActivity {
 
 	private static final int RECOGNIZE_SPEECH_ACTIVITY = 1;
 	public VoiceRecognizer VC;
+    public String text;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,22 +71,23 @@ public class MainActivity extends ActionBarActivity {
     // Mic Button onClick() Listener
     public void startRecord(View view) {
 
+        Toast.makeText(this, "Mic button", Toast.LENGTH_SHORT).show();
 
         //sendSearchRequest();
     }
 
     // Send Button onClick() Listener
     public void getInputString(View view) {
-        String key;
-        
-        EditText et = (EditText)findViewById(R.id.send_text_button);
-        key = et.getText().toString();
+        EditText et = (EditText)findViewById(R.id.input_field);
+        text = et.getText().toString();
 
-        //sendSearchRequest();
+        //Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
+
+        sendSearchRequest();
     }
 
     // Call indent and send key
-    public void sendSearchRequest(String text) {
+    public void sendSearchRequest() {
         Intent intent = new Intent(this, ResultActivity.class);
         intent.putExtra("key",text);
         startActivity(intent);

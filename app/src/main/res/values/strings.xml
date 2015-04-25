@@ -9,4 +9,6 @@
     <string name="button_send">ENVIAR</string>
     <string name="title_activity_result">ResultActivity</string>
 
+    <string name="empty_text"></string>
+
 </resources>
