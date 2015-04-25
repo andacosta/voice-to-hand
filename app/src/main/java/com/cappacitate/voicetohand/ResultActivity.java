@@ -6,8 +6,21 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+//package com.wallpaer;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+
+import java.io.IOException;
+import java.io.InputStream;
 
 public class ResultActivity extends ActionBarActivity {
+
+    public String text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,9 +28,11 @@ public class ResultActivity extends ActionBarActivity {
         setContentView(R.layout.activity_result);
 
         // Get string data
-        String text = getIntent().getStringExtra("key");
+        text = getIntent().getStringExtra("key");
 
         ((TextView)findViewById(R.id.string_label)).setText(text);
+
+        showImage();
     }
 
 
@@ -43,9 +58,29 @@ public class ResultActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    // Back Button onClick() Listener
-    public void returnHome() {
-
+    // Show image in Result
+    public void showImage() {
+        String imageName;
+        ImageView image = (ImageView)findViewById(R.id.image_result);
+        switch (text) {
+            case "hoy":
+                image.setImageResource(R.drawable.hoy);
+                break;
+            case "mañana":
+                image.setImageResource(R.drawable.hoy);
+                break;
+            case "mediodia":
+                image.setImageResource(R.drawable.hoy);
+                break;
+            case "noche":
+                image.setImageResource(R.drawable.hoy);
+                break;
+            case "tarde":
+                image.setImageResource(R.drawable.hoy);
+                break;
+            default:
+                image.setImageResource(R.drawable.noimage1);
+        }
     }
 
 }
